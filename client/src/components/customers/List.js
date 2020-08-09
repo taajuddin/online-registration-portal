@@ -35,7 +35,7 @@ class CustomersList extends React.Component {
     render() {
         return (
             <div>
-                <h2>Customers - {this.props.customers.length}</h2>
+                <h2>Appointment- {this.props.customers.length}</h2>
 
                 <Table striped>
                     <thead>
@@ -56,7 +56,7 @@ class CustomersList extends React.Component {
                 
                 </Table>
 
-                <Link to="customers/new">Add Customer</Link>
+                <Link to="customers/new">Add Appointment</Link>
             </div>
         )
     }

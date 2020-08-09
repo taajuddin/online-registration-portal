@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 mongoose.Promise = global.Promise
-const CONNECTION_URI= "mongodb://localhost:27017/ticket-master-bk"
+const CONNECTION_URI= "mongodb://localhost:27017/online-registration-portal"
 mongoose.connect(CONNECTION_URI,{useNewUrlParser: true})
     .then(()=>{
         console.log('succesfully connected to db')

@@ -1,6 +1,5 @@
 import axios from '../config/axios'
 
-import {updateTicketCustomer} from '../actions/tickets'
 
 import swal from 'sweetalert'
 
@@ -101,7 +100,7 @@ export const startEditCustomer = (customer,redirect) => {
                 const customer = response.data
                 redirect()
                 dispatch(editCustomer(customer))
-                dispatch(updateTicketCustomer(customer))
+              
             }
         })
     }

@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom'
 
 import {connect} from 'react-redux'
 
-import Tabs from '../common/Tabs'
 
 class CustomerShow extends React.Component {
     constructor(props){
@@ -48,8 +47,7 @@ class CustomerShow extends React.Component {
 
                     <Link to={`/customers/edit/${this.props.customer._id}`}> Edit </Link>
     
-                    <Tabs tickets={this.state.tickets}/>
-                    </div>
+                                      </div>
                 )}
                 
             

@@ -14,7 +14,7 @@ class CustomerNew extends React.Component {
     render(){
         return (
             <div>
-                <h2>Add Customer</h2>
+                <h2>Add Registration</h2>
                 <CustomerForm handleCustomerSubmit={this.handleCustomerSubmit}/>
             </div>
         )

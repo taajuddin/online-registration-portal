@@ -4,17 +4,7 @@ import CustomersList from './components/customers/List'
 import CustomerNew from './components/customers/New'
 import CustomerShow from './components/customers/Show'
 import CustomerEdit from './components/customers/Edit'
-import DepartmentsList from './components/departments/List'
-import DepartmentShow from './components/departments/Show'
-import DepartmentEdit from './components/departments/Edit'
-import EmployeesList from './components/employees/List'
-import EmployeeNew from './components/employees/New'
-import EmployeeShow from './components/employees/Show'
-import EmployeeEdit from './components/employees/Edit'
-import TicketsList from './components/tickets/List'
-import TicketNew from './components/tickets/New'
-import TicketShow from './components/tickets/Show'
-import TicketEdit from './components/tickets/Edit'
+
 import Home from './components/Home/index'
 import Registration from './components/user/Registration'
 import Login from './components/user/Login'
@@ -32,7 +22,7 @@ function App(props) {
     <BrowserRouter>
     <div>
     <Navbar color="light" light expand="md" className="mb-5">
-      <NavbarBrand>Ticket Master</NavbarBrand>
+      <NavbarBrand>Online Registration Portal</NavbarBrand>
       <Nav className="ml-auto" navbar>
         <NavItem>
           <Link className="nav-link text-primary" to="/">Home</Link>
@@ -40,17 +30,9 @@ function App(props) {
         {Object.keys(props.user).length !== 0 &&
         <React.Fragment>
         <NavItem>
-          <Link className="nav-link text-primary" to="/customers">Customers</Link>
+          <Link className="nav-link text-primary" to="/customers">Appointment</Link>
         </NavItem>
-        <NavItem>
-          <Link className="nav-link text-primary" to="/departments">Departments</Link>
-        </NavItem>
-        <NavItem>
-          <Link className="nav-link text-primary" to="/employees">Employees</Link>
-        </NavItem>
-        <NavItem>
-          <Link className="nav-link text-primary" to="/tickets">Tickets</Link>
-        </NavItem>
+        
         </React.Fragment>
         }
         {Object.keys(props.user).length == 0 ? (
@@ -94,17 +76,7 @@ function App(props) {
       <Route path ="/customers/new" component={CustomerNew}/>
       <Route path="/customers/edit/:id" component={CustomerEdit} />
       <Route path="/customers/:id" component={CustomerShow}/>
-      <Route path="/departments" component={DepartmentsList} exact={true}/>
-      <Route path="/departments/edit/:id" component={DepartmentEdit}/>
-      <Route path="/departments/:id" component={DepartmentShow}/>
-      <Route path="/employees" component={EmployeesList} exact={true}/>
-      <Route path="/employees/new" component={EmployeeNew}/>
-      <Route path="/employees/edit/:id" component={EmployeeEdit}/>
-      <Route path="/employees/:id" component={EmployeeShow}/>
-      <Route path="/tickets" component={TicketsList} exact={true}/>
-      <Route path="/tickets/new" component={TicketNew}/> 
-      <Route path="/tickets/edit/:id" component={TicketEdit}/>
-      <Route path="/tickets/:id" component={TicketShow}/>
+      
       <Route path="/users/login" component={Login} exact={true} />
       <Route path="/users/registration" component={Registration} exact={true}/>
   

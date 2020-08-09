@@ -8,7 +8,7 @@ import { startEditCustomer } from '../../actions/customers'
     
     handleCustomerSubmit = (customer) => {
 
-        const redirect = () => this.props.history.push(`/customers/${customer.id}`)
+        const redirect = () => this.props.history.push(`/customers`)
         this.props.dispatch(startEditCustomer(customer,redirect))
     }
     render(){

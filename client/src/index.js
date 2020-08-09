@@ -7,9 +7,7 @@ import configureStore from './store/configureStore'
 import axios from './config/axios'
 import {setUser} from './actions/user'
 import {startSetCustomers} from './actions/customers'
-import {startSetDepartments} from './actions/departments'
-import {startSetEmployees} from './actions/employees'
-import {startSetTickets} from './actions/tickets'
+
 
 
 const store = configureStore()
@@ -30,9 +28,7 @@ if(localStorage.getItem('authToken')){
                 const user = response.data
                 store.dispatch(setUser(user))
                 store.dispatch(startSetCustomers())
-                store.dispatch(startSetDepartments())
-                store.dispatch(startSetEmployees())
-                store.dispatch(startSetTickets())     
+                 
         })             
 }
 
